@@ -1,0 +1,29 @@
+/* Shared styles for the photo privacy, passport photo, OCR, prayer times, PDF password and video tools. */
+.suite-file-card{border:1px solid #efd3d8;border-radius:12px;background:#fff;padding:1rem;margin:1rem 0;overflow-wrap:anywhere}
+.suite-file-card strong{display:block;margin-bottom:.4rem}
+.suite-meta-list{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:.3rem 1rem;font-size:.9rem;margin:.6rem 0}
+.suite-meta-list dt{color:#725d63}.suite-meta-list dd{margin:0;overflow-wrap:anywhere}
+.redact-stage,.crop-stage{position:relative;margin:1rem 0;max-width:100%;line-height:0;user-select:none;-webkit-user-select:none}
+.redact-stage canvas,.crop-stage canvas{max-width:100%;height:auto;border:1px solid #dcbac1;border-radius:6px;touch-action:none;cursor:crosshair}
+.redact-draft{position:absolute;border:2px dashed #b83245;background:rgba(184,50,69,.15);pointer-events:none}
+.suite-preview{max-width:100%;height:auto;border:1px solid #dcbac1;border-radius:6px;background:#fff}
+.suite-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:.8rem}
+.suite-table th,.suite-table td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #efd3d8}
+.suite-table th{color:#725d63;font-weight:600}
+.suite-table-wrap{overflow-x:auto;max-width:100%}
+.suite-big{font-size:clamp(1.4rem,4vw,2rem);font-weight:650;margin:.6rem 0}
+.diff-view{font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border:1px solid #efd3d8;border-radius:8px;padding:.8rem;max-height:520px;overflow:auto;margin-top:.8rem}
+.diff-view .del{background:#ffd7dc;color:#8a1022;text-decoration:line-through}
+.diff-view .ins{background:#d6f5dd;color:#0c5a24}
+.diff-view .line{display:block;padding:0 .3rem;border-left:3px solid transparent}
+.diff-view .line.del{border-left-color:#c02a3e;text-decoration:none}.diff-view .line.ins{border-left-color:#1d8a3c}
+.ocr-text{width:100%;min-height:220px}
+.video-preview{width:100%;max-height:360px;background:#000;border-radius:8px;margin:1rem 0}
+@media(max-width:600px){.suite-meta-list{grid-template-columns:1fr}.suite-meta-list dd{margin-bottom:.4rem}}
+.suite-table tr.is-next td{background:#ffe7eb;font-weight:600}
+@media print{.site-header,.site-footer,.suite-privacy,.suite-notes,#tool-controls,#tool-status,.suite-actions,.suite-lead,h1{display:none!important}.suite-panel{border:0;padding:0}}
+.pp-layout{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:flex-start}.pp-side{flex:1 1 220px;display:flex;flex-direction:column;gap:.8rem}.pp-side input[type=range]{width:100%}
+.video-stage{position:relative;line-height:0;margin:.6rem 18px 0}.video-stage .video-preview{margin:0;display:block}.video-fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;border-radius:8px}
+.suite-table td.is-next{background:#ffe7eb;font-weight:600}.prayer-table th small,.prayer-table td small{font-weight:400;color:#725d63}
+.pt-month th,.pt-month td{white-space:nowrap;text-align:center}.pt-month th:nth-child(-n+2),.pt-month td:nth-child(-n+2){text-align:left}.pt-month th.pt-group{border-bottom:0}.pt-month th.pt-sub{font-size:.75rem;padding-top:0}.pt-month td.pt-shia,.pt-month th.pt-sub:nth-child(even){color:#962638}.pt-month tr.is-friday td{background:#fff3f5}.pt-month tr.is-next td{background:#ffe7eb;font-weight:600}
+@media print{@page{size:A4 portrait;margin:9mm}#today-view,.suite-big,.pt-month-head+.suite-table-wrap~.suite-actions{display:none!important}.suite-main{padding:0!important;max-width:none}.pt-month{font-size:8.5pt}.pt-month th,.pt-month td{padding:1.6pt 3pt!important}.pt-month-head h2{font-size:13pt;margin:0}.pt-month-head p{font-size:8pt;margin:2pt 0 4pt}.suite-table-wrap{overflow:visible}.pt-month tr.is-next td{background:none;font-weight:400}}

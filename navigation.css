@@ -1,0 +1,11 @@
+/* Shared header: keep desktop categories on one row and scroll only the menu when space is limited. */
+.site-header .header-content,.app-header .header-content{max-width:1600px;width:100%;margin:0 auto;padding:12px 24px;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:20px;box-sizing:border-box}
+.header-content .logo{flex:0 0 auto;white-space:nowrap;font-size:1.2rem;gap:8px}
+.header-content .logo span{font-size:1.2rem}
+.header-content .logo svg{flex-shrink:0;width:28px;height:28px}
+.header-content .csbh-nav{display:flex;flex:1 1 auto;flex-basis:auto;min-width:0;max-width:100%;width:auto;order:0;flex-wrap:nowrap;align-items:center;justify-content:safe center;gap:clamp(8px,0.85vw,18px);overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-padding-inline:8px}
+.header-content .csbh-nav .nav-link{flex:0 0 auto;white-space:nowrap;font-size:clamp(.8125rem,.97vw,.9375rem);padding:10px 0}
+.header-content .theme-toggle{flex:0 0 auto;width:38px;height:38px;padding:7px}
+.csbh-nav .nav-link:focus-visible{outline:2px solid var(--primary-color,#b83245);outline-offset:-2px;border-radius:3px}
+@media(max-width:900px){.site-header .header-content,.app-header .header-content{flex-wrap:wrap;gap:8px 16px;padding:10px 16px}.header-content .logo{margin-right:auto}.header-content .csbh-nav{order:3;flex:1 0 100%;justify-content:flex-start;gap:20px}.header-content .csbh-nav .nav-link{font-size:.875rem}}
+@media(min-width:901px) and (max-width:1279px){.header-content .csbh-nav{flex-wrap:wrap;justify-content:center;row-gap:0;overflow:visible}.header-content .csbh-nav .nav-link{padding:6px 0}}

@@ -1,0 +1,2 @@
+importScripts('/vendor/lame.min.js');
+self.onmessage=({data:d})=>{try{const encoder=new lamejs.Mp3Encoder(2,d.rate,d.bitrate),parts=[];for(let i=0;i<d.left.length;i+=1152){const b=encoder.encodeBuffer(d.left.subarray(i,i+1152),d.right.subarray(i,i+1152));if(b.length)parts.push(new Uint8Array(b));if(i%115200===0)self.postMessage({progress:i/d.left.length*100});}const tail=encoder.flush();if(tail.length)parts.push(new Uint8Array(tail));self.postMessage({blob:new Blob(parts,{type:'audio/mpeg'})});}catch(e){self.postMessage({error:e.message});}};
